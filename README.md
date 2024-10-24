@@ -1,4 +1,4 @@
-# Cloth Simulation with Verlet Integration
+# Maze Generating and Solving Algorithms Visualizer
 
 A JavaScript-based cloth simulation using Verlet integration and constraints, rendered with [PixiJS](https://pixijs.com/).
 
@@ -6,15 +6,15 @@ A JavaScript-based cloth simulation using Verlet integration and constraints, re
 
 ## Demo
 
-[Live Demo Link](https://fabric.ryanaxtell.dev/)
+[Live Demo Link](https://maze.ryanaxtell.dev/)
 
 # Controls
 
-| Command          | Action         |
-|------------------|----------------|
-| **Left click**   | Drag cloth     |
-| **Middle Click** | High grav mode |
-| **Right click**  | Cut cloth      |
+| Command          | Action                                   |
+|------------------|------------------------------------------|
+| **Left click**   | Pan camera                               |
+| **Middle Click** | Rotate camera                            |
+| **Right click**  | Toggle walls / drag start and end points |  |
 
 ## Installation
 
@@ -26,8 +26,8 @@ A JavaScript-based cloth simulation using Verlet integration and constraints, re
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Ryan-Axtell-abc/verlet-cloth-sim.git
-cd verlet-cloth-sim
+git clone https://github.com/Ryan-Axtell-abc/three-js-maze.git
+cd three-js-maze
 ```
 
 ### Install Dependencies
