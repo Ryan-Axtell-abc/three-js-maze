@@ -611,6 +611,7 @@ export function a_star_maze_stepper(grid, maze_solver, defaults, globals, scene)
                 else {
                     keep_looping = false;
                 }
+				/*
                 const keyz = String(current_coord.x)+"_"+String(current_coord.y);
                 if (maze_solver.a_star_frontier_tiles_heap.index_tracking_map.has(keyz)) {
                     for (let i = 1; i < maze_solver.a_star_frontier_tiles_heap.heap.length; i++) {
@@ -619,6 +620,7 @@ export function a_star_maze_stepper(grid, maze_solver, defaults, globals, scene)
                         //console.log(i, key, value[0]);
                     }
                 }
+				*/
             }
 
             var direction_to_previous = maze_solver.direction_to_source_map.get(key);
