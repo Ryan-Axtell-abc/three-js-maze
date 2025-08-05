@@ -135,27 +135,16 @@
 
       <div id="run-items-holder" class="menu-items-holder">
         <div id="grid-size-setter-holder" class="setting-holder">
-          <div class="setting-title-holder">
-            <h3 class="setting-title">
-              Grid
-            </h3>
+          <div class="setting-title"> Grid </div>
+  
+          <div class="input-group">
+            <label for="grid-size-setter-input">Grid Size</label>
+            <input class="wide-input" type="number" id="grid-size-setter-input" name="grid-size-setter-input" min="2" max="500" />
           </div>
-  
-          
-  
-          <div class="setting-row-holder" style="border-bottom: 1px solid;">
-            <label for="grid-size-setter-input">Size</label><br>
-            <div class="setting-row-input-holder setting-row-select-holder"> 
-              <input type="number" id="grid-size-setter-input" name="grid-size-setter-input" min="2" max="500" style="width: calc(100% - 8px);"/>
-            </div>
-          </div>
-  
-          <div class="setting-row-holder setting-row-holder-last">
-            <a id="grid-size-setter-button" class="button">	
-              <span>Build </span>
-            </a>
-          </div>
-  
+
+          <a id="grid-size-setter-button" class="button button-primary">	
+            <span>Build </span>
+          </a> 
   
           
         </div>
@@ -166,89 +155,61 @@
         -->
   
         <div id="maze-gen-holder" class="setting-holder">
-          <div class="setting-title-holder">
-            <h3 class="setting-title">
-              Maze Generation
-            </h3>
-          </div>
-          <div class="setting-row-holder">
-            <label for="maze-gen-dropdown">Algorithm</label><br>
-            <div class="setting-row-input-holder setting-row-select-holder"> 
-              <select name="maze-gen-dropdown" id="maze-gen-dropdown" style="width: 100%;">
+          <div class="setting-title"> Maze Generation </div>
+
+          <div class="input-group">
+            <label for="maze-gen-dropdown">Algorithm</label>
+              <select class="wide-input" name="maze-gen-dropdown" id="maze-gen-dropdown">
                 <option value="backtracking">Backtracking</option>
                 <option value="prim">Prim</option>
                 <option value="noise">Noise</option>
               </select>
-            </div>
           </div>
   
-          <div class="setting-row-holder" style="border-bottom: 1px solid;">
-            <label for="maze-gen-checkbox">Visualize</label><br>
-            <div class="setting-row-input-holder"> 
-              <input type="checkbox" id="maze-gen-checkbox" name="maze-gen-checkbox" value="false" checked>
-            </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="maze-gen-checkbox" name="maze-gen-checkbox" value="false" checked>
+            <label class="checkbox-label" for="maze-gen-checkbox">Visualize</label>
           </div>
-          <div class="setting-row-holder setting-row-holder-last">
-            <a id="maze-gen-button" class="button">	
-              <span>Generate</span>
-            </a>
-          </div>
+          <a id="maze-gen-button" class="button button-primary">	
+            <span>Generate</span>
+          </a>
           
           
         </div>
   
-        <div id="maze-solve-holder" class="setting-holder">
-          <div class="setting-title-holder">
-            <h3 class="setting-title">
-              Maze Solving
-            </h3>
+        <div id="maze-solve-holder" class="setting-holder" style="padding-bottom: 16px; border: none;">
+          <div class="setting-title"> Maze Solving </div>
+
+          <div class="input-group">
+            <label for="maze-solve-dropdown">Algorithm</label>
+              <select class="wide-input" name="maze-solve-dropdown" id="maze-solve-dropdown">
+                <option value="dfs">Depth First Search</option>
+                <option value="bfs">Breadth First Search</option>
+                <option value="gfs">Greedy BFS</option>
+                <option value="wf-lh">Left Wall Follower</option>
+                <option value="a-star">A Star</option>
+                <option value="dead-end-filling">Dead End Filler</option>
+              </select>
           </div>
-          <!--
-          -->
-          <div class="setting-row-holder">
-            <label for="maze-solve-dropdown">Algorithm</label><br>
-            <div class="setting-row-input-holder setting-row-select-holder">
-            <select name="maze-solve-dropdown" id="maze-solve-dropdown" style="width: 100%;">
-              <option value="dfs">Depth First Search</option>
-              <option value="bfs">Breadth First Search</option>
-              <option value="gfs">Greedy BFS</option>
-              <option value="wf-lh">Left Wall Follower</option>
-              <option value="a-star">A Star</option>
-              <option value="dead-end-filling">Dead End Filler</option>
-              <!--
-              -->
-            </select>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="maze-solve-checkbox" name="maze-solve-checkbox" value="false" checked>
+            <label class="checkbox-label" for="maze-solve-checkbox">Visualize</label>
           </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="maze-solve-rescue-checkbox" name="maze-solve-rescue-checkbox" value="false" checked>
+            <label class="checkbox-label" for="maze-solve-rescue-checkbox">Rescue</label>
           </div>
-          
-          <div class="setting-row-holder">
-            <label for="maze-solve-checkbox">Visualize</label><br>
-            <div class="setting-row-input-holder">
-              <input type="checkbox" id="maze-solve-checkbox" name="maze-solve-checkbox" value="false" checked>
-            </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="maze-solve-stepper-checkbox" name="maze-solve-stepper-checkbox" value="false">
+            <label class="checkbox-label" for="maze-solve-stepper-checkbox">Step one by one</label>
           </div>
-  
-          <div class="setting-row-holder">
-            <label for="maze-solve-rescue-checkbox">Rescue</label><br>
-            <div class="setting-row-input-holder">
-              <input type="checkbox" id="maze-solve-rescue-checkbox" name="maze-solve-rescue-checkbox" value="false" checked>
-            </div>
-          </div>
-  
-       
-  
-          <div class="setting-row-holder" style="border-bottom: 1px solid;">
-            <label for="maze-solve-stepper-checkbox">Step one by one</label><br>
-            <div class="setting-row-input-holder">
-              <input type="checkbox" id="maze-solve-stepper-checkbox" name="maze-solve-stepper-checkbox" value="false">
-            </div>
-          </div>
-  
-          <div class="setting-row-holder setting-row-holder-last">
-            <a id="maze-solve-button" class="button">	
-              <span>Solve</span>
-            </a>
-          </div>
+
+          <a id="maze-solve-button" class="button button-primary">	
+            <span>Solve</span>
+          </a>
           
           
         </div>

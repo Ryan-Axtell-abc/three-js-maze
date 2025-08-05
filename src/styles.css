@@ -1,6 +1,9 @@
 body {
     font-family: NotoSerif;
-    box-sizing: content-box;
+}
+
+* {
+    box-sizing: border-box !important;
 }
 @font-face {
     font-family: NotoSerif;
@@ -13,8 +16,9 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 450px;
-    height: calc(40px + 240px);
+    width: 452px;
+    /* 40px + 240px */
+    height: 282px;
     /*
     padding: 20px;
     background-color: aquamarine;
@@ -41,7 +45,7 @@ body {
 @media (max-width: 471px) {
     #fps-view-holder {
         /*background-color: #58f211;*/
-        width: calc(100% - 2px) !important;
+        width: 100% !important;
         left: 0px !important;
         right: 0px !important;
         top: auto !important;
@@ -49,7 +53,7 @@ body {
     }
     #menu-holder {
         /*background-color: #58f211;*/
-        width: calc(100% - 1px) !important;
+        width: 100% !important;
         left: 0px !important;
         right: 0px !important;
         bottom: auto !important;
@@ -86,14 +90,14 @@ body {
 }
 
 .window-control-box {
-    width: 25px;
-    height: calc(100% - 10px);
     border-radius: 4px;
     border: 1px solid white;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 4px 5px;
 }
 
 .hidden {
@@ -106,7 +110,7 @@ body {
 }
 
 .minimized-window {
-    transition: height 0.1s cubic-bezier(0.65, 0, 0.35, 1) !important;
+    transition: height 0.2s cubic-bezier(0.65, 0, 0.35, 1) !important;
     /*
     , left 0.17s cubic-bezier(0.65, 0, 0.35, 1), top 0.17s cubic-bezier(0.65, 0, 0.35, 1), bottom 0.17s cubic-bezier(0.65, 0, 0.35, 1)
     */
@@ -118,7 +122,7 @@ body {
 }
 
 .unminimizing-window {
-    transition: height 0.1s cubic-bezier(0.65, 0, 0.35, 1) !important;
+    transition: height 0.2s cubic-bezier(0.65, 0, 0.35, 1) !important;
     /*
     , left 0.17s cubic-bezier(0.65, 0, 0.35, 1), top 0.17s cubic-bezier(0.65, 0, 0.35, 1), bottom 0.17s cubic-bezier(0.65, 0, 0.35, 1)
     */
@@ -130,7 +134,7 @@ body {
 }
 
 .minimized-menu {
-    transition: height 0.1s cubic-bezier(0.65, 0, 0.35, 1) !important;
+    transition: height 0.2s cubic-bezier(0.65, 0, 0.35, 1) !important;
     /*
     , left 0.17s cubic-bezier(0.65, 0, 0.35, 1), top 0.17s cubic-bezier(0.65, 0, 0.35, 1), bottom 0.17s cubic-bezier(0.65, 0, 0.35, 1)
     overflow: hidden;
@@ -150,14 +154,8 @@ body {
 
 }
 
-.minimized-menu #menu-category-selector-holder {
-    padding: 0px !important;
-    height: 0%;
-
-}
-
 .unminimizing-menu {
-    transition: height 0.1s cubic-bezier(0.65, 0, 0.35, 1) !important;
+    transition: height 0.2s cubic-bezier(0.65, 0, 0.35, 1) !important;
     /*
     , left 0.17s cubic-bezier(0.65, 0, 0.35, 1), top 0.17s cubic-bezier(0.65, 0, 0.35, 1), bottom 0.17s cubic-bezier(0.65, 0, 0.35, 1)
     height: 576px !important;
@@ -169,6 +167,8 @@ body {
     height: fit-content !important;
     height: 610px !important;
     height: 615px !important;
+    height: 600px !important;
+    height: 598px !important;
 
 }
 
@@ -212,27 +212,22 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 340px;
+    width: 320px;
+    width: 280px;
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
     
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    
 	background-color: rgba(255,255,255,.1);
+	background-color: rgba(255,255,255,.25);
 	border: 1px solid rgba(255,255,255,.1);
 	border: 1px solid rgba(0,0,0,1);
 	backdrop-filter: blur(1.25rem);
     border-radius: 10px;
-    transition: height 0.1s cubic-bezier(0.65, 0, 0.35, 1) !important;
-
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    border-radius: 16px;
+    transition: all 0.15s cubic-bezier(0.65, 0, 0.35, 1) !important;
 }
 
 #menu-category-selector-holder {
@@ -279,18 +274,12 @@ body {
 }
 
 .menu-items-holder {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    padding: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    gap: 18px;
     overflow: hidden;
-
-    
-
 }
 
 
@@ -305,23 +294,46 @@ body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none;
-    min-width: 80px;
-    max-width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
+
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.04s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+
+
+    font-family: NotoSerif;
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
 }
 
 .setting-holder {
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: flex-start;
-    align-items: center;
+    align-items: start;
     /*
     border: 1px solid;
     */
     width: 100%;
+
+
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+
+    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .setting-row-holder {
@@ -337,10 +349,6 @@ body {
     padding: 5px 0px;
     border-bottom: 1px dashed;
     flex-wrap: wrap;
-
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .setting-row-holder-last {
@@ -376,14 +384,58 @@ body {
 }
 
 .setting-title {
-    margin: 0px;
-    margin: 6px 0px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-input[type=number] {
-    height: 18px;
+.input-group {
+    margin-bottom: 5px;
+    margin-bottom: 12px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-select {
-    height: 24px;
+.wide-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 6px;
+    font-size: 13px;
+    color: #000000;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    color: #000000;
+    cursor: pointer;
+    flex: 1;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #000000;
+    cursor: pointer;
 }

@@ -1086,7 +1086,7 @@ function minimize_menu(element) {
 function grid_size_setter($this, type) {
 	var val;
 	if (type === "button") {
-		val = $this.parentElement.previousElementSibling.lastElementChild.lastElementChild.value;
+		val = $this.previousElementSibling.lastElementChild.value;
 		
 	}
 	else if (type === "enter") {
@@ -1122,7 +1122,7 @@ function onWindowResize() {
 	
 	first_person_camera.aspect = fps_element.offsetWidth/fps_element.offsetHeight;
     first_person_camera.updateProjectionMatrix();
-	first_person_renderer.setSize( fps_element.offsetWidth, fps_element.offsetHeight);
+	first_person_renderer.setSize( fps_element.offsetWidth+2, fps_element.offsetHeight+2);
 
 	let elmnt = document.getElementById("fps-view-holder")
 	var style = window.getComputedStyle(elmnt);
