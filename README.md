@@ -2,6 +2,8 @@
 
 A JavaScript site that uses Three.js to animate maze generation and maze-solving algorithms in 3D. It features algorithms like A\* and depth-first search, with an interactive step-by-step mode to help users better understand the processes behind the algorithms.
 
+Hi testing
+
 ![Maze Generation and Maze Solving Screenshot](https://github.com/Ryan-Axtell-abc/three-js-maze/blob/main/assets/screenshot.png)
 
 ## Demo
