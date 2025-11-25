@@ -206,12 +206,30 @@ body {
     */
 }
 
+#menu-holder-holder-holder {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    overflow-y: auto;
+}
+
+#menu-holder-holder {
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    float: left;
+
+}
+
 #menu-holder {
     /*
-    */
     position: absolute;
     top: 10px;
     right: 10px;
+    */
     width: 320px;
     width: 280px;
 
