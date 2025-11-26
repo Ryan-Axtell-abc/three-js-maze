@@ -214,6 +214,8 @@ body {
     display: flex;
     justify-content: end;
     overflow-y: auto;
+
+    background-color: rgba(127, 255, 212, 0.158);
 }
 
 #menu-holder-holder {
