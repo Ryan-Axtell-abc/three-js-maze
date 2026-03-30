@@ -79,6 +79,7 @@ const camera = new PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 5000);
 //camera.position.set(-17,31,33);
 
 const renderer = new WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(innerWidth, innerHeight);
 //renderer.toneMapping = ACESFilmicToneMapping;
 renderer.toneMapping = NoToneMapping;
