@@ -45,7 +45,7 @@ export class globals_data {
 		this.is_dragging_start = false;
 		this.is_dragging_end = false;
 		this.use_first_person_camera = false;
-		this.is_first_person_camera_blocked = false;
+		this.is_first_person_camera_blocked = true;
 		this.is_nothing_blocking_grid = false;
 		this.is_narrow = false;
 		this.lights_still_moving = true;
