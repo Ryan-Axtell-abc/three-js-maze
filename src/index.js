@@ -1042,12 +1042,27 @@ function general_hover() {
 	//console.log("I am hovered")
 }
 
+let lastWasPortraitMobile = null;
+
+function getPortraitZoomOut() {
+	const isPortrait = window.innerHeight > window.innerWidth;
+	const isMobileWidth = window.innerWidth <= 768;
+	if (isPortrait && isMobileWidth) {
+		return 1.4;
+	}
+	return 1.0;
+}
+
 function reset_controls() {
 	controls.target.set(globals.grid_size / 2 - .5, 0, globals.grid_size / 2 - .5);
 	controls.dampingFactor = 0.05;
 	controls.enableDamping = true;
-	camera.position.set(globals.grid_size_x / 2 - .5, globals.grid_size_y * 1.5, (globals.grid_size_y / 2 - .5) * 2.2 + 5);
-
+	const zoom = getPortraitZoomOut();
+	camera.position.set(
+		globals.grid_size_x / 2 - .5,
+		globals.grid_size_y * 1.5 * zoom,
+		((globals.grid_size_y / 2 - .5) * 2.2 + 5) * zoom
+	);
 }
 
 function minimize_window(element, globals) {
@@ -1130,6 +1145,12 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 
 	renderer.setSize(window.innerWidth, window.innerHeight);
+
+	const isPortraitMobile = (window.innerHeight > window.innerWidth) && (window.innerWidth <= 768);
+	if (lastWasPortraitMobile !== null && isPortraitMobile !== lastWasPortraitMobile) {
+		reset_controls();
+	}
+	lastWasPortraitMobile = isPortraitMobile;
 
 	first_person_camera.aspect = fps_element.offsetWidth / fps_element.offsetHeight;
 	first_person_camera.updateProjectionMatrix();
